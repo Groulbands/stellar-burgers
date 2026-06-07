@@ -11,8 +11,6 @@ import {
 } from '@selectors';
 import { clearOrder, createOrder } from 'src/services/slices/orderSlice';
 import { clearConstructor } from 'src/services/slices/constructorSlice';
-import { getFeed } from 'src/services/slices/feedSlice';
-import { getUserOrders } from 'src/services/slices/ordersSlice';
 
 export const BurgerConstructor: FC = () => {
   const dispatch = useDispatch();
@@ -44,8 +42,6 @@ export const BurgerConstructor: FC = () => {
       .unwrap()
       .then(() => {
         dispatch(clearConstructor());
-        dispatch(getFeed());
-        dispatch(getUserOrders());
       });
   };
 
