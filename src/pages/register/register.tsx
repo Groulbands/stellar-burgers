@@ -31,6 +31,9 @@ export const Register: FC = () => {
       .then(() => {
         const from = location.state?.from?.pathname || '/';
         navigate(from, { replace: true });
+      })
+      .catch((err) => {
+        console.error('Ошибка входа:', err);
       });
   };
 
