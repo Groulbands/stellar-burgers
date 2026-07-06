@@ -14,6 +14,7 @@ export const IngredientsCategoryUI = forwardRef<
     <ul className={styles.items} ref={ref}>
       {ingredients.map((ingredient) => (
         <BurgerIngredient
+          data-testid='ingredient'
           ingredient={ingredient}
           key={ingredient._id}
           count={ingredientsCounters[ingredient._id]}
