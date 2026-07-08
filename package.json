@@ -87,6 +87,7 @@
     "url-loader": "^4.1.1"
   },
   "scripts": {
+    "build": "webpack --mode=production",
     "start": "webpack serve --mode=development",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
